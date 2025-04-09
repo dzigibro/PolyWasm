@@ -1,0 +1,11 @@
+[package]
+name = "mutator"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+rand = "0.8"
+wasmtime = "16.0.0"
+anyhow = "1.0"
+md5 = "0.7"
+chrono = "0.4"
