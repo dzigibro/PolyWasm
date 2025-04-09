@@ -34,8 +34,7 @@ fn main() -> anyhow::Result<()> {
     let engine = Engine::default();
     let mut store = Store::new(&engine, ());
     let wat = generate_random_wat();
-    let mutated_code = wat.clone(); // <<<<<<<<<< WE NEEDED THIS LINE
-
+    let mutated_code = wat.clone(); 
     let module = Module::new(&engine, wat)?;
     let instance = Instance::new(&mut store, &module, &[])?;
     let run = instance.get_typed_func::<(), ()>(&mut store, "run")?;
